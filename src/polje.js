@@ -88,7 +88,7 @@ export class Polje extends React.Component {
                 prethodni1=null;
             }
         }
-        if(prethodni!=null && prethodni1.props.slika===prethodni.props.slika && prethodni.state.show && prethodni1.state.show && !prethodni.state.pronadjen && !prethodni1.state.pronadjen)
+        if(prethodni!=null && prethodni1.props.slika===prethodni.props.slika && prethodni!=prethodni1 && prethodni.state.show && prethodni1.state.show && !prethodni.state.pronadjen && !prethodni1.state.pronadjen)
         {
             prethodni.state.pronadjen=true;
             prethodni1.state.pronadjen=true;
@@ -98,7 +98,7 @@ export class Polje extends React.Component {
         }
         prethodni=prethodni1;
         prethodni1=this;
-        if(brotvorenih==16)
+        if(brotvorenih>=16)
         {
             alert("Pobedili ste!");
         }
